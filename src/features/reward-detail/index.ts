@@ -1,0 +1,1 @@
+export { default } from './reward-detail-screen';

@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "pawsville",
-    "slug": "pawsville",
+    "name": "petshop",
+    "slug": "petshop",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "pawsville",
+    "scheme": "petshop",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
@@ -43,6 +43,18 @@
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "a7e2c8ee-6e5b-4b86-a536-66b9aa629168"
+      }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/a7e2c8ee-6e5b-4b86-a536-66b9aa629168"
     }
   }
 }
