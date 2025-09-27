@@ -261,13 +261,18 @@ export function useBathGroomingController(): BathGroomingController {
     },
 
     getCategoryLabel: (category: string) => {
-      const labels = {
-        all: 'All Services',
-        bath: 'Bath',
-        grooming: 'Grooming',
-        combo: 'Combo Packages',
-      };
-      return labels[category as keyof typeof labels] || category;
+      switch (category) {
+        case 'all':
+          return t('allServices');
+        case 'bath':
+          return t('bath');
+        case 'grooming':
+          return t('grooming');
+        case 'combo':
+          return t('comboPackages');
+        default:
+          return category;
+      }
     },
 
     getAvailableCategories: () => {

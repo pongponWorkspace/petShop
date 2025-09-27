@@ -137,7 +137,7 @@ export default function ContentListScreen() {
         </Text>
         <View style={[styles.couponStatus, { backgroundColor: statusStyle.backgroundColor }]}>
           <Text style={[styles.couponStatusText, { color: statusStyle.color }]}>
-            {getStatusText(item.status)}
+            {getStatusText(item.status, t)}
           </Text>
         </View>
       </TouchableOpacity>
@@ -166,7 +166,7 @@ export default function ContentListScreen() {
         <View style={styles.serviceFooter}>
           <View style={[styles.couponStatus, { backgroundColor: statusStyle.backgroundColor }]}>
             <Text style={[styles.couponStatusText, { color: statusStyle.color }]}>
-              {getStatusText(item.status)}
+              {getStatusText(item.status, t)}
             </Text>
           </View>
         </View>

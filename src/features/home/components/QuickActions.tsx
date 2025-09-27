@@ -1,6 +1,6 @@
+import { mockQuickActions, QuickAction } from '@/src/data/mock';
 import { IconSymbol } from '@/src/shared/components/ui/icon-symbol';
 import { BorderRadius, Colors, Layout, Shadows, Spacing, Typography } from '@/src/shared/constants/theme';
-import { mockQuickActions, QuickAction } from '@/src/data/mock';
 import { useRouter } from 'expo-router';
 import React from 'react';
 import { Alert, Linking, Platform, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
@@ -24,29 +24,29 @@ export default function QuickActions({ actions = mockQuickActions }: QuickAction
 
   const openShopApp = async () => {
     try {
-      const shopeeAppUrl = 'https://s.lazada.co.th/s.ApKpB';
-      const canOpen = await Linking.canOpenURL(shopeeAppUrl);
+      const lazadaAppUrl = 'https://s.lazada.co.th';
+      const canOpen = await Linking.canOpenURL(lazadaAppUrl);
 
       if (canOpen) {
-        await Linking.openURL(shopeeAppUrl);
+        await Linking.openURL(lazadaAppUrl);
       } else {
         Alert.alert(
-          'Shopee App Not Found',
-          'Would you like to download the Shopee app or visit the website?',
+          'Lazada App Not Found',
+          'Would you like to download the Lazada app or visit the website?',
           [
             {
               text: 'Download App',
               onPress: () => {
                 const storeUrl = Platform.OS === 'ios'
-                  ? 'https://apps.apple.com/app/shopee/id959841449'
-                  : 'https://play.google.com/store/apps/details?id=com.shopee.ph';
+                  ? 'https://apps.apple.com/app/lazada'
+                  : 'https://play.google.com/store/apps/details?id=com.lazada.ph';
                 Linking.openURL(storeUrl);
               }
             },
             {
               text: 'Open Website',
               onPress: () => {
-                Linking.openURL('https://shopee.com');
+                Linking.openURL('https://lazada.com');
               }
             },
             {
@@ -57,8 +57,8 @@ export default function QuickActions({ actions = mockQuickActions }: QuickAction
         );
       }
     } catch (error) {
-      console.error('Error opening Shopee:', error);
-      Alert.alert('Error', 'Unable to open Shopee. Please try again later.');
+      console.error('Error opening Lazada:', error);
+      Alert.alert('Error', 'Unable to open Lazada. Please try again later.');
     }
   };
 

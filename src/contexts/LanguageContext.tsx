@@ -125,6 +125,7 @@ const translations: Record<Language, Record<string, string>> = {
     'loadingArticles': 'Loading articles...',
     'announcement': 'Announcement',
     'readyToUse': 'Ready to Use',
+    'unknown': 'Unknown',
     'upcoming': 'Upcoming',
     'completed': 'Completed',
 
@@ -258,11 +259,11 @@ const translations: Record<Language, Record<string, string>> = {
     'timePlaceholder': 'HH:MM',
 
     // Alert Messages
-    'shopeeAppNotFound': 'Shopee App Not Found',
-    'wouldYouLikeToDownload': 'Would you like to download the Shopee app or visit the website?',
+    'lazadaAppNotFound': 'Lazada App Not Found',
+    'wouldYouLikeToDownload': 'Would you like to download the Lazada app or visit the website?',
     'downloadApp': 'Download App',
     'openWebsite': 'Open Website',
-    'unableToOpenShopee': 'Unable to open Shopee. Please try again later.',
+    'unableToOpenLazada': 'Unable to open Lazada. Please try again later.',
 
     // Common UI Elements
     'viewAll': 'View All',
@@ -499,8 +500,6 @@ const translations: Record<Language, Record<string, string>> = {
     'generalHospital': 'General Veterinarian',
     'generalHospitalDesc': 'Routine check-ups, vaccinations, and general health care',
     'bookAppointment': 'Book Appointment',
-    'selectDate': 'Select Date',
-    'selectTime': 'Select Time',
     'availableSlots': 'Available Time Slots',
     'fullyBooked': 'Fully Booked',
     'additionalInformation': 'Additional Information',
@@ -581,14 +580,12 @@ const translations: Record<Language, Record<string, string>> = {
     'failedToCreateBooking': 'Failed to create booking',
     'bookingFailed': 'Booking Failed',
 
-    // Bath & Grooming
-    'bathGrooming': 'Bath & Grooming',
+    // Bath & Grooming (Additional keys)
     'professionalGroomingServices': 'Professional Grooming Services',
     'chooseGroomingService': 'Choose from our professional grooming services to keep your pet clean and healthy',
     'selectGroomingService': 'Select a Grooming Service',
     'included': 'Included',
     'selectService': 'Select Service',
-    'selectedService': 'Selected Service',
     'changeService': 'Change Service',
     'selectPet': 'Select Pet',
     'choosePetForGrooming': 'Choose which pet you would like to book grooming service for',
@@ -599,6 +596,9 @@ const translations: Record<Language, Record<string, string>> = {
     'groomingBookingConfirmedTitle': 'Booking Confirmed',
     'groomingBookingConfirmedMessage': 'Your grooming service has been booked successfully!\\n\\nService: {{service}}\\nPet: {{pet}}\\nPrice: ${{price}}\\nDuration: {{duration}}\\nBooking ID: {{bookingId}}\\n\\nWe will contact you to schedule the appointment.',
     'ok': 'OK',
+    'bath': 'Bath',
+    'combo': 'Combo',
+    'comboPackages': 'Combo Packages',
 
     // Loyalty Card
     'PetShopPoints': 'PetShop Points',
@@ -820,6 +820,7 @@ const translations: Record<Language, Record<string, string>> = {
     'loadingArticles': 'กำลังโหลดบทความ...',
     'announcement': 'ประกาศ',
     'readyToUse': 'พร้อมใช้งาน',
+    'unknown': 'ไม่ทราบ',
     'upcoming': 'กำลังจะมาถึง',
     'completed': 'เสร็จสิ้น',
 
@@ -957,11 +958,11 @@ const translations: Record<Language, Record<string, string>> = {
     'timePlaceholder': 'ชช:นน',
 
     // Alert Messages
-    'shopeeAppNotFound': 'ไม่พบแอป Shopee',
-    'wouldYouLikeToDownload': 'คุณต้องการดาวน์โหลดแอป Shopee หรือเยียมชมเว็บไซต์?',
+    'lazadaAppNotFound': 'ไม่พบแอป Lazada',
+    'wouldYouLikeToDownload': 'คุณต้องการดาวน์โหลดแอป Lazada หรือเยียมชมเว็บไซต์?',
     'downloadApp': 'ดาวน์โหลดแอป',
     'openWebsite': 'เปิดเว็บไซต์',
-    'unableToOpenShopee': 'ไม่สามารถเปิด Shopee ได้ กรุณาลองใหม่อีกครั้ง',
+    'unableToOpenLazada': 'ไม่สามารถเปิด Lazada ได้ กรุณาลองใหม่อีกครั้ง',
 
     // Common UI Elements
     'viewAll': 'ดูทั้งหมด',
@@ -1196,8 +1197,6 @@ const translations: Record<Language, Record<string, string>> = {
     'generalHospital': 'สัตวแพทย์อายุกรรม',
     'generalHospitalDesc': 'ตรวจสุขภาพทั่วไป ฉีดวัคซีน และการดูแลสุขภาพพื้นฐาน',
     'bookAppointment': 'นัดหมายแพทย์',
-    'selectDate': 'เลือกวันที่',
-    'selectTime': 'เลือกเวลา',
     'availableSlots': 'ช่วงเวลาที่ว่าง',
     'fullyBooked': 'เต็มแล้ว',
     'additionalInformation': 'ข้อมูลเพิ่มเติม',
@@ -1273,13 +1272,11 @@ const translations: Record<Language, Record<string, string>> = {
     'bookingFailed': 'การจองล้มเหลว',
 
     // Bath & Grooming
-    'bathGrooming': 'อาบน้ำและตัดแต่งขน',
     'professionalGroomingServices': 'บริการตัดแต่งขนมืออาชีพ',
     'chooseGroomingService': 'เลือกจากบริการตัดแต่งขนมืออาชีพของเราเพื่อให้สัตว์เลี้ยงของคุณสะอาดและมีสุขภาพดี',
     'selectGroomingService': 'เลือกบริการตัดแต่งขน',
     'included': 'รวมในบริการ',
     'selectService': 'เลือกบริการ',
-    'selectedService': 'บริการที่เลือก',
     'changeService': 'เปลี่ยนบริการ',
     'selectPet': 'เลือกสัตว์เลี้ยง',
     'choosePetForGrooming': 'เลือกสัตว์เลี้ยงที่คุณต้องการจองบริการตัดแต่งขน',
@@ -1290,6 +1287,9 @@ const translations: Record<Language, Record<string, string>> = {
     'groomingBookingConfirmedTitle': 'การจองสำเร็จ',
     'groomingBookingConfirmedMessage': 'บริการตัดแต่งขนของคุณได้รับการจองสำเร็จแล้ว!\\n\\nบริการ: {{service}}\\nสัตว์เลี้ยง: {{pet}}\\nราคา: ${{price}}\\nระยะเวลา: {{duration}}\\nรหัสการจอง: {{bookingId}}\\n\\nเราจะติดต่อคุณเพื่อนัดหมายเวลา',
     'ok': 'ตกลง',
+    'bath': 'อาบน้ำ',
+    'combo': 'คอมโบ',
+    'comboPackages': 'แพ็กเกจคอมโบ',
 
     // Loyalty Card
     'PetShopPoints': 'PetShop พอยต์',

@@ -70,7 +70,7 @@ export default function CouponSection({ coupons = mockCoupons }: CouponSectionPr
                 styles.statusText,
                 { color: getCouponStatusStyle(coupon.status, Colors)?.color || Colors.light.textSecondary }
               ]}>
-                {getStatusText(coupon.status)}
+                {getStatusText(coupon.status, t)}
               </Text>
             </View>
           </Card>

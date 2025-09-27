@@ -69,16 +69,32 @@ export const getServiceStatusStyle = (status: ServiceStatus, colors: any) => {
   }
 };
 
-export const getStatusText = (status: string) => {
+export const getStatusText = (status: string, t?: (key: string) => string) => {
+  if (!t) {
+    // Fallback to English if no translation function provided
+    switch (status) {
+      case 'available':
+      case 'ready_to_use':
+        return status === 'available' ? 'Available' : 'Ready to Use';
+      case 'used':
+        return 'Used';
+      case 'expired':
+        return 'Expired';
+      default:
+        return 'Unknown';
+    }
+  }
+
   switch (status) {
     case 'available':
+      return t('available');
     case 'ready_to_use':
-      return status === 'available' ? 'Available' : 'Ready to Use';
+      return t('readyToUse');
     case 'used':
-      return 'Used';
+      return t('used');
     case 'expired':
-      return 'Expired';
+      return t('expired');
     default:
-      return 'Unknown';
+      return t('unknown');
   }
 };
